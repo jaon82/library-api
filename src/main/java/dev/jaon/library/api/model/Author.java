@@ -10,9 +10,8 @@ import lombok.Setter;
 @Setter
 @NoArgsConstructor
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class Book {
+public class Author {
 	private Long id;
-	private String title;
-	private String isbn;
-	private Long authorId;
+	private String firstName;
+	private String lastName;
 }

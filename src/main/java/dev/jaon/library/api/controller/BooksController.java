@@ -38,7 +38,7 @@ public class BooksController {
 		return booksService.create(book);
 	}
 
-	@PutMapping()
+	@PutMapping("/{id}")
 	public ResponseEntity<Book> updateBook(@RequestBody Book book) {
 		return booksService.update(book);
 	}

@@ -35,8 +35,9 @@ public class AuthorsController {
 	}
 
 	@PostMapping
-	public Author createAuthor(@RequestBody Author author) {
-		return authorsService.create(author);
+	public ResponseEntity<Author> createAuthor(@RequestBody Author author) {
+		Author newAuthor = authorsService.create(author);
+		return new ResponseEntity<Author>(newAuthor, HttpStatus.CREATED);
 	}
 
 	@PutMapping("/{id}")

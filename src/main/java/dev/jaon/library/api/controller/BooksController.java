@@ -33,9 +33,10 @@ public class BooksController {
 		return booksService.findOne(id);
 	}
 
-	@PostMapping()
-	public Book createBook(@RequestBody Book book) {
-		return booksService.create(book);
+	@PostMapping
+	public ResponseEntity<Book> createBook(@RequestBody Book book) {
+		Book newBook = booksService.create(book);
+		return new ResponseEntity<Book>(newBook, HttpStatus.CREATED);
 	}
 
 	@PutMapping("/{id}")

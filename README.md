@@ -4,25 +4,28 @@ Projeto criado utilizando [Spring Initializr](https://start.spring.io/).
 
 ## Instruções
 
+Para rodar a aplicação, sendo disponibilizada em http://localhost:8080.
+
 No diretório do projeto, executar:
+
+### `docker-compose up`
+
+## Ou
 
 ### `MacOS/Linux:`
 ./mvnw spring-boot:run
 
+Alternativamente, você pode gerar um jar, através do seguinte comando:\
+./mvnw clean package
+
+E então, executá-lo através de:\
+java -jar target/library.api-0.0.1-SNAPSHOT.jar
+
 ### `Windows:`
 mvnw spring-boot:run
 
-Para rodar a aplicação.\
-Sendo disponibilizada em [http://localhost:8080](http://localhost:8080).
-
-Alternativamente, você pode gerar um jar, através do seguinte comando:
-### `MacOS/Linux:`
-./mvnw clean package
-
-### `Windows:`
+Alternativamente, você pode gerar um jar, através do seguinte comando:\
 mvnw clean package
 
 E então, executá-lo através de:\
-java -jar target/library.api-0.0.1-SNAPSHOT.jar\
-\
-Fincando disponível no mesmo endereço.
+java -jar target/library.api-0.0.1-SNAPSHOT.jar
